@@ -5,7 +5,7 @@ function! tectonic#delete#delete(...)
 
 	try
 		call delete(expand(l:current_buffer))
-		execute 'bdelete!' l:current_buffer
+		execute 'bwipeout!' l:current_buffer
 	catch
 		echoerr "Can't delete" l:current_buffer
 	endtry

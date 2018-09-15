@@ -29,6 +29,6 @@ function! tectonic#move_or_rename#move_or_rename(destination_file, action)
 	endif
 
 	execute 'saveas!' fnameescape(l:destination)
-	bdelete! #
+	bwipeout! #
 	call delete(expand('#:p'))
 endfunction
