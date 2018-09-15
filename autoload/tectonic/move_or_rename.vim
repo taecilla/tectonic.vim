@@ -1,4 +1,4 @@
-function tectonic#move_or_rename#move_or_rename(destination_file, action)
+function! tectonic#move_or_rename#move_or_rename(destination_file, action)
 	let l:existing_file_dir = expand('%:h')
 	let l:existing_file_path = expand('%:p')
 

@@ -1,4 +1,4 @@
-function tectonic#delete#delete(...)
+function! tectonic#delete#delete(...)
 	let l:current_buffer = a:0
 		\ ? a:1
 		\ : '%'
