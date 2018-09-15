@@ -8,7 +8,7 @@ augroup SureToCreateDirectory
 	autocmd BufWritePre * call tectonic#sure_to_create_dir#sure_to_create_dir()
 augroup END
 
-command! -nargs=? -complete=buffer Delete call tectonic#delete#delete(<f-args>)
+command! -nargs=? -complete=buffer -bang Delete call tectonic#delete#delete(<bang>0, <f-args>)
 
 command! -nargs=1 -complete=file Move call tectonic#move_or_rename#move_or_rename(<f-args>, 'move')
 command! -nargs=1 -complete=file Rename call tectonic#move_or_rename#move_or_rename(<f-args>, 'rename')
