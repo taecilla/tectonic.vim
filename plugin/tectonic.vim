@@ -3,10 +3,10 @@ if exists('g:tectonic_loaded')
 endif
 let g:tectonic_loaded = 1
 
-augroup SureToCreateDirectory
+augroup AutoMkdir
 	autocmd!
 	autocmd BufWritePre *
-		\ call tectonic#sure_to_create_dir#sure_to_create_dir()
+		\ call tectonic#auto_mkdir#auto_mkdir()
 augroup END
 
 command! -nargs=? -complete=buffer -bang Delete
