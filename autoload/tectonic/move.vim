@@ -1,4 +1,4 @@
-function! tectonic#move_to#move_to(destination_file, force)
+function! tectonic#move#move_to(destination_file, force)
 	let l:current_file_path = expand('%:p')
 
 	if !filewritable(l:current_file_path)
@@ -26,7 +26,7 @@ function! tectonic#move_to#move_to(destination_file, force)
 	bwipeout! #
 endfunction
 
-function! tectonic#move_to#rename_to(destination_file, force)
+function! tectonic#move#rename_to(destination_file, force)
 	let l:new_location = expand('%:h') . '/' . a:destination_file
-	call tectonic#move_to#move_to(l:new_location, a:force)
+	call tectonic#move#move_to(l:new_location, a:force)
 endfunction

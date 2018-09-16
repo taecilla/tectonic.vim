@@ -13,6 +13,7 @@ command! -nargs=? -complete=buffer -bang Delete
 	\ call tectonic#delete#delete(<bang>0, <f-args>)
 
 command! -nargs=1 -complete=file -bang Move
-	\ call tectonic#move_to#move_to(<f-args>, <bang>0)
-command! -nargs=1 -complete=file -bang Rename
-	\ call tectonic#move_to#rename_to(<f-args>, <bang>0)
+	\ call tectonic#move#move_to(<f-args>, <bang>0)
+command! -nargs=1
+	\ -complete=customlist,tectonic#complete#rename_complete
+	\ -bang Rename call tectonic#move#rename_to(<f-args>, <bang>0)
