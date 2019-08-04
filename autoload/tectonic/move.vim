@@ -1,7 +1,7 @@
 function! tectonic#move#move_to(destination_file, force)
 	let l:current_file_path = expand('%:p')
 
-	if !filewritable(l:current_file_path)
+	if filereadable(l:current_file_path) && !filewritable(l:current_file_path)
 		call tectonic#non_persistent_error#non_persistent_error
 			\ (expand('%') . " is not writable")
 		return
