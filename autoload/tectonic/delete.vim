@@ -21,7 +21,7 @@ function! s:delete(buffer, force)
 		call delete(a:buffer)
 	endif
 
-	execute 'bwipeout!' . a:buffer
+	execute 'bwipeout!' . bufnr(a:buffer)
 	echo a:buffer "deleted successfully"
 endfunction
 
